@@ -4,6 +4,7 @@ import Home from './Components/Home/Home.jsx';
 import Course from './Components/Course/Course.jsx';
 import Navbar from './Components/Navbar/Navbar.jsx';
 import Cart from './Components/Cart/Cart.jsx';
+import About from './Components/About/About.jsx';
 
 const App = () => {
     const [cart, setCart] = useState([]);
@@ -17,6 +18,7 @@ const App = () => {
             <Navbar cart={cart} />
             <Routes>
                 <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/courses" element={<Course addToCart={addToCart} />} />
                 <Route path="/cart" element={<Cart cart={cart} />} />
             </Routes>
